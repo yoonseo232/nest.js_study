@@ -3,8 +3,6 @@ import { CreateUserDto } from './dto/create-user.dto';
 import { UserLoginDto } from './dto/user-login.dto';
 import { VerifyEmailDto } from './dto/verify-email.dto';
 import { UserInfo } from './UserInfo';
-import { TestDto } from './dto/test.dto'
-import { TestInfo } from './TestInfo'
 
 @Controller('users')
 export class UsersController {
@@ -21,12 +19,6 @@ export class UsersController {
 
   @Post('/login')
   async login(@Body() dto: UserLoginDto): Promise<string> {
-    console.log(dto);
-    return;
-  }
-
-  @Post('/test')
-  async test(@Body() dto: TestDto): Promise<string>{
     console.log(dto);
     return;
   }
